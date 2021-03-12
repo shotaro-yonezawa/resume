@@ -8,7 +8,7 @@ $post = new Post;
 $post_list = $post->getPosts();
 
 $user = new User;
-$user_photo = $user->getUserPhoto();
+// $user_photo = $user->getUserPhoto();
 ?>
 
 <!DOCTYPE html>
@@ -34,10 +34,11 @@ $user_photo = $user->getUserPhoto();
                     <!------------ PHP ------------>
                     <?php
                         while($post = $post_list->fetch_assoc()){
+                            $user_id = $post['user_id']
                     ?>
                     <button>
                         <div class="leaf" style="">
-                            <img src="../img/<?= $user_photo ?>" alt="Profile Picture" style="height:50px;">
+                            <img src="../img/<?= $user->getUserPhoto($user_id) ?>" alt="Profile Picture" style="height:50px;">
                             <div class="leaf_right">
                                 <p>username</p>
                                 <p><?= $post['content'] ?></p>

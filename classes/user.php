@@ -4,10 +4,9 @@ require_once "database.php";
 
 class User extends Database{
     public function getUserPhoto(){
-        $user_id = $_SESSION['id'];
-        $sql = "SELECT user_photo FROM users WHERE id = $user_id";
+        $sql2 = "SELECT user_photo FROM users WHERE id = $user_id";
         
-        if($result = $this->conn->query($sql)){
+        if($result = $this->conn->query($sql2)){
             $row = $result->fetch_assoc();
             if($row['user_photo'] != NULL){
                 return $row['user_photo'];
@@ -17,6 +16,16 @@ class User extends Database{
         }else{
             die("Error fetching photo: " . $this->conn->error);
         }
+
+        public function getPosts(){
+            $sql = "SELECT post_id, content, `user_id`FROM posts ORDER BY post_id DESC";
+            if($result = $this->conn->query($sql)){
+                return $result;
+            }else{
+                die("Error retrieving posts: ".$this->conn->error);
+            }
+        }
+
     }
 
     public function updateUserPhoto($account_id,$image_name){
