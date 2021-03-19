@@ -26,7 +26,7 @@ $user = new User;
                 <div class="card">
                     <div class="card-body">
                         <form action="" method="post">
-                            <label for="username">usernane</label>
+                            <label for="username">username</label>
                             <input type="text" name="username" id="username" required autofocus>
                             
                             <label for="password">password</label>

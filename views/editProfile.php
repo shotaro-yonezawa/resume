@@ -1,10 +1,9 @@
 <?php
 session_start();
-
 require_once "../classes/user.php";
-
 $user = new User;
-$user_photo = $user->getUserPhoto();
+$account_id = $_SESSION['id'];
+$user_photo = $user->getUserPhoto($account_id);
 $user_profile = $user->getUser();
 
 // echo $_SESSION['id'];
@@ -24,8 +23,8 @@ $user_profile = $user->getUser();
 </head>
 <body>
     <main>
-        <div class="container pb-5">
-            <div class="col-4 mb-3 mx-auto">
+        <div class="container pb-5 mt-3">
+            <div class="col-8 col-lg-4 mb-3 mx-auto">
                 <div class="card">
                     <?=
                          "<img src='../img/"."$user_photo'"."  alt='Profile Photo' class='card-top-img'>"
@@ -34,14 +33,14 @@ $user_profile = $user->getUser();
                         <form action="../actions/updateUserPhoto.php" method="post" enctype="multipart/form-data">
                             <div class="custom-file mb-2 col">
                                 <label for="image" class="custom-file-label">Choose Photo</label>
-                                <input type="file" name="image" id="image" class="custom-file-input">
+                                <input type="file" name="image" id="image" class="custom-file-input" required>
                             </div>
                             <button type="submit" class="btn btn-outline-secondary btn-sm btn-block" name="btn_update_photo">Update</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <form action="../actions/updateProfile" method="POST">
+            <form action="../actions/updateProfile.php" method="POST" class="col-10 col-lg-6 mx-auto">
                 <textarea  name="bio" cols="30" rows="10" class="form-control mb-5" name="bio" style="height: 250px;" placeholder="Write your bio here"><?= $user_profile['bio'] ?></textarea>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend" style="width:60px;">
@@ -57,6 +56,9 @@ $user_profile = $user->getUser();
                 </div>
                 <button type="submit" name="btn_submit" class="d-block ml-auto btn btn-outline-dark btn-sm">Save Changes</button>
             </form>
+            <a href="../actions/logout.php">Log out</a>
+            <br>
+            <a href="leaves.php">Leaves</a>
         </div>
     </main>
 

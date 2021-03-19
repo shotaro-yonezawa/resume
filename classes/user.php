@@ -3,10 +3,10 @@
 require_once "database.php";
 
 class User extends Database{
-    public function getUserPhoto(){
-        $sql2 = "SELECT user_photo FROM users WHERE id = $user_id";
+    public function getUserPhoto($user_id){
+        $sql = "SELECT user_photo FROM users WHERE id = $user_id";
         
-        if($result = $this->conn->query($sql2)){
+        if($result = $this->conn->query($sql)){
             $row = $result->fetch_assoc();
             if($row['user_photo'] != NULL){
                 return $row['user_photo'];
@@ -16,22 +16,12 @@ class User extends Database{
         }else{
             die("Error fetching photo: " . $this->conn->error);
         }
-
-        public function getPosts(){
-            $sql = "SELECT post_id, content, `user_id`FROM posts ORDER BY post_id DESC";
-            if($result = $this->conn->query($sql)){
-                return $result;
-            }else{
-                die("Error retrieving posts: ".$this->conn->error);
-            }
-        }
-
     }
 
     public function updateUserPhoto($account_id,$image_name){
         $sql = "UPDATE users SET user_photo = '$image_name' WHERE id = $account_id";
         // 1. Upload the name of the image to the database.
-        if ($this->conn->query($sql)) {
+        if ($this->conn->query($sql)){
         $destination = "../img/" . basename($image_name); //basename remove anything without last part of filename
         // 2. Move the image into img folder.
             if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)){
@@ -45,10 +35,21 @@ class User extends Database{
         }
     }
 
+    public function updateProfile($account_id,$new_bio){
+        $sql = "UPDATE users SET bio = '$new_bio' WHERE id = $account_id";
+        if($this->conn->query($sql)){
+            header("location: ../views/editProfile.php");
+            exit;
+        } else {
+           die("Error updating profile: " . $this->conn->error);
+        }
+    }
+
+
+
     public function getUser(){
-        $user_id = $_SESSION['id'];
-        $sql = "SELECT * FROM users WHERE id = $user_id";
-  
+        $account_id = $_SESSION['id'];
+        $sql = "SELECT * FROM users WHERE id = $account_id";
         if($result = $this->conn->query($sql)){
             $row = $result->fetch_assoc();
             return $row;
@@ -56,8 +57,37 @@ class User extends Database{
            die("Error retrieving users: " . $this->conn->error);
         }
     }
-    
+    public function getUserProfile(){
+        $user_id = $_GET['user_id'];
+        $sql = "SELECT * FROM users WHERE id = $user_id";
+        if($result = $this->conn->query($sql)){
+            $row = $result->fetch_assoc();
+            return $row;
+        } else {
+           die("Error retrieving a user profile: " . $this->conn->error);
+        }
+    }
 
+    // public function seeUsername(){
+    //     if(isset($_POST["profile_btn"])){
+    //         $cnt1 = $_POST["cnt"];
+    //         if($cnt1 % 2 == 0){
+    //             $switch =+ 1;
+    //             $user_id = $_POST['profile_btn'];
+    //             $sql = "SELECT * FROM users WHERE id = $user_id";
+    //             if($result = $this->conn->query($sql)){
+    //                 $row = $result->fetch_assoc();
+    //                 $username = $row['username'];
+    //                 $user_bio = $row['bio'];
+    //                 return "<p>$username</p>
+    //                 <p>$user_bio</p>";
+    //             }
+    //         }else{
+    //             return NULL;
+    //         }
+    //     }
+    // }
+    
     public function createUser($username,$password){
         $password = password_hash($password,PASSWORD_DEFAULT);
         $sql = "INSERT INTO users(username,`password`) VALUES ('$username','$password')";
@@ -123,8 +153,10 @@ class User extends Database{
                 echo $error;
             }
         }
-        
     }
+
+
+    
 
 
 
