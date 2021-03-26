@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Black Ops One', cursive; */
+    text-decoration: none;
+    /* color: #ffffff; */
+    font-family: 'Work Sans', sans-serif;
+    color: #e7dfd5;
+
+}
+
+body{
+    background-image: url(../img/leaves2.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    /* background-color:white; */
+}
+a{
+    color: #74a1ca;
+}
+
+h1{
+    padding-top: 140px;
+    margin-bottom:30px;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Original Surfer', cursive;
+}
+h1 > span{
+    color: #74a1ca;
+    font-family: 'Original Surfer', cursive;
+}
+
+.card{
+    /* margin-top:30%; */
+    background-color: rgba(33, 47, 84, 0.7);
+    border: 1px solid #e7dfd5;
+    /* background-image: url(../img/leaf_background.jpg);
+    background-size: cover; */
+}
+.card-body > p{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Original Surfer', cursive;
+}
+
+form label{
+    width:100%;
+    display: block;
+    margin-bottom:2px;
+}
+form input{
+    width:100%;
+    display: block;
+    color:black;
+    margin-bottom:20px;
+}
+form button{
+    margin-top:100px;
+    padding:2px 10px;
+    border: 1px solid #e7dfd5;
+    border-radius: 5px;
+    background: transparent; /* 背景の灰色を消す */
+    margin:0 ;
+}
+form button:hover{
+    background-color: #e7dfd5;
+    color:rgba(33, 47, 84, 1);
+    /* color: #74a1ca; */
+}
+.errorMessage p{
+    color:yellow;
+    font-size: 18px;
+}
+.sign_up{
+    text-align: end;
+}

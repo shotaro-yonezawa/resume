@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Black Ops One', cursive; */
+    text-decoration: none;
+    /* color: #ffffff; */
+}
+textarea:focus{
+    /* border: 2px solid rgba(255,255,255,0.7); */
+    background: none;
+}
+
+body{
+    background-image: url(../img/paw.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    /* background-color:white; */
+}
+
+.leaves{
+    margin-top:20px;
+    margin-bottom:50px;
+}
+.leaf{
+    margin-bottom:7px;
+    color:#e7dfd5;
+}
+.leaf a{
+    color: #e7dfd5;
+}
+
+.leaf_top{
+    width:100%;
+    text-align: left;
+    position:relative;
+    background-image: url(../img/leaf_background.jpg);
+    background-size: cover;
+}
+
+
+.leaf_top button{
+    border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+    background: transparent; /* 背景の灰色を消す */
+}
+
+
+.leaf_top > img{
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:50px;
+    height:50px;
+}
+.leaf_top p{
+    width:100%;
+    overflow-wrap: break-word;
+}
+.leaf_contents{
+    padding-left:80px;
+    padding-right:30px;
+    
+    /* background-color: green; */
+}
+.post{
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.post p{
+    margin-bottom:5px;
+}
+
+
+.username{
+    font-size: 25px;
+    padding-top:5px;
+    /* padding-bottom:17px; */
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+.delete_leaf{
+    position:absolute;
+    top:10px;
+    right:10px;
+    text-align: right;
+}
+.delete_leaf button{
+    color: #5d837f;
+
+}
+
+.delete_leaf > button:hover{
+    color: #e7dfd5;
+    
+}
+.delete_button{
+    padding:0 10px 5px;
+    background-color: #274441;
+    border: 2px solid orange;
+    text-align: center;
+}
+.delete_button p{
+    color: orange;
+    margin:5px;
+    /* padding:0; */
+}
+.delete_button button{
+    padding:0 5px;
+    color: #5d837f;
+    margin:0 5px; 
+}
+.delete_button button:hover{
+    padding:0 5px;
+    color: orange;
+    margin:0 5px; 
+}
+
+.detail_button button{
+    width:100%;
+    text-align: center;
+    color: #e7dfd5;
+     
+}
+
+.leaf_bottom{
+    width:97%;
+    padding-top:5px;
+    /* padding-left:60px; */
+    padding-bottom:10px;
+    margin-left:3%;
+    /* background-color: #6ba8a9; */
+}
+
+.reply_form{
+    width:100%;
+    padding:20px 10px;
+    background-image: url(../img/leaf_background2.jpg);
+    background-size: cover;
+}
+.reply_form textarea{
+    /* width:100%; */
+    height:50px;
+    border: 2px solid rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0,0.2);
+    /* border-radius: 5px; */
+}
+
+#replyButton{
+    border: 2px solid rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.7);
+}
+#replyButton:hover{
+    background-color: rgba(255,255,255,1);
+    color: #357376;
+}
+
+.reply_leaf{
+    position:relative;
+    background-color: #357376;
+    background-image: url(../img/leaf_background3.jpg);
+    background-size: cover;
+    /* background-color: red; */
+    border: 1px solid black;
+    margin-top:5px;
+
+}
+.reply_leaf > img{
+    position:absolute;
+    width:35px;
+    height:35px;
+    top:8px;
+    left:8px;
+}
+
+
+.reply_leaf_contents{
+    padding:10px 30px 20px 60px;
+}
+
+.replyUsername p{
+    line-height: 28px;
+    margin:0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    /* background-color: blue; */
+}
+.replyContent p{
+    /* background-color: red; */
+    margin:0;
+}
+
+.post_leaf{
+    margin-top:50px;
+    padding:30px;
+    /* font-family: 'Original Surfer', cursive; */
+    background-image: url(../img/leaf_background.jpg);
+    background-size: cover;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+
+}
+.post_leaf button{
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0);
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top:10px;
+    width:100%;
+    display:inline-block;
+    text-align: center;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 5px;
+}
+.post_leaf button:hover{
+    background-color: rgba(255,255,255,1);
+    /* background-color: rgba(0,0,0,0.5); */
+    color: #357376;
+    /* color: black; */
+    
+}
+
+.post_leaf textarea{
+    padding-left:10px;
+    width:100%;
+    color:rgba(255,255,255,1);
+    height:50px;
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2);
+    
+}
+
+
+/* -------- Session User Profile -------- */
+.profileCard{
+    padding:20px 20px;
+    margin-top:50px;
+    position: relative;
+    background-image: url(../img/pexels-la-miko-3616764.jpg);
+    background-size: cover;
+    border-radius: 7px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+}
+.profileCard img{
+    width:150px;
+    height:150px;
+    /* width:50px; */
+    box-shadow: 3px 0px 5px rgba(0,0,0,0.2);
+}
+.textContents{
+    padding-left:10px;
+    /* background-color: red; */
+}
+.editProfile{
+    text-align: end;
+}
+.editProfile a{
+    color: black;
+    display:inline-block;
+    padding:5px 10px;
+    border: 2px solid rgba(33, 47, 84, 0.7);
+    border-radius: 5px;
+}
+.editProfile a:hover{
+    background-color: rgba(255,255,255,0.5);
+    text-decoration: none; 
+}
+.sessionUsername p{
+    font-size: 30px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+}
+.bio{
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.link{
+    margin:10px 20px 0;
+    text-align: end;
+}
+.link a{
+    color: black;
+    background-color: rgba(255,255,255,0.7);
+    padding-top:5px;
+    padding-bottom:5px;
+    width:100%;
+    display:inline-block;
+    text-align: center;
+    border: 2px solid rgba(33, 47, 84, 0.7);
+    border-radius: 5px;
+    font-family: 'Original Surfer', cursive;
+
+}
+.link a:hover{
+    background-color: white;
+    text-decoration: none; 
+}

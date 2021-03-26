@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    /* color: #e7dfd5; */
+
+}
+
+body{
+    background-image: url(../img/pexels-fwstudio-139312.jpg);
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.profileCard{
+    padding:4% 4%;
+    margin-top:14%;
+    position: relative;
+    background-image: url(../img/pexels-la-miko-3616764.jpg);
+    background-size: cover;
+    border-radius: 7px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    /* background-color: red; */
+}
+.profileCard textarea, .profileCard input{
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+.pictureForm form{
+    background-color: rgba(255,255,255,0.7);
+}
+.textContents{
+    padding-left:10px;
+    /* background-color: red; */
+}
+.textContents > form{
+    margin-bottom:20px;
+}
+.textContents label{
+    /* width:100%; */
+    /* display: block; */
+    margin-bottom:2px;
+}
+.textContents input{
+    /* width:100%; */
+    /* display: block; */
+    /* color:black; */
+    margin-bottom:20px;
+}
+.textContents textarea{
+    /* display:block; */
+    height:140px;
+    margin-bottom:20px;
+}
+.textContents button{
+    padding:5px 15px;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid rgba(33, 47, 84, 0.7);
+    border-radius: 5px;
+    
+}
+.textContents button:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+
+.deleteButtons > div{
+    display:block;
+    float:right;
+}
+.trashButton button{
+    color:rgba(33, 47, 84, 0.5);
+    border: 0px solid rgba(33, 47, 84, 0.7);
+    padding:7px 0px;
+    margin-left:20px;
+    /* padding:0; */
+}
+.trashButton button:hover{
+    color:red;
+    background-color: rgba(255,255,255,0);
+
+}
+.deleteConfirming{
+    text-align: center;
+}
+.deleteConfirming p{
+    font-size: 22px;
+    color:red;
+    margin:0;
+}
+.deleteConfirming button{
+    margin:0 15px;
+    color:red;
+    border: 3px solid rgba(255, 0, 0, 1);
+    background-color: rgba(255,255,255,0.3);
+}
+.deleteConfirming button:hover{
+    background-color: rgba(255,255,255,0.7);
+}
+
+
+.link{
+    margin:20px 20px 0;
+}
+.link a{
+    color: black;
+    background-color: rgba(255,255,255,0.7);
+    padding-top:5px;
+    padding-bottom:5px;
+    width:100%;
+    display:inline-block;
+    text-align: center;
+    border: 2px solid rgba(33, 47, 84, 0.7);
+    border-radius: 5px;
+}
+.link a:hover{
+    background-color: white;
+    text-decoration: none; 
+}

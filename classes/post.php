@@ -20,6 +20,7 @@ class Post extends Database{
         }
     }
     public function addPost($content,$user_id){
+        $content = $this->conn->real_escape_string($content);
         $sql = "INSERT INTO posts(content, `user_id`) VALUES ('$content','$user_id')";
         if($this->conn->query($sql)){
             header("location: ../views/leaves.php");
@@ -29,6 +30,7 @@ class Post extends Database{
         }
     }
     public function replyPost($content,$account_id,$reply_address_id){
+        $content = $this->conn->real_escape_string($content);
         // Add reply to replies table
         $sql1 = "INSERT INTO replies(content,`user_id`,reply_address_id) VALUES ('$content','$account_id','$reply_address_id')";
         if($this->conn->query($sql1)){
@@ -60,7 +62,7 @@ class Post extends Database{
         if($result = $this->conn->query($sql)){
             $count_reply = $result->fetch_assoc();
             if($count_reply['COUNT(*)'] >= 1){
-                return $count_reply['COUNT(*)']." reply";
+                return "<i class='fas fa-comment-dots'></i> ".$count_reply['COUNT(*)'];
             }
         }else{
             die("Error counting reply: ".$this->conn->error);
@@ -70,10 +72,16 @@ class Post extends Database{
     public function deleteButton($user_id,$post_id){
         if($user_id == $_SESSION['id']){
             echo "
-            <button type='button' data-toggle='collapse' data-target='#delete_post_confirm$post_id' aria-expanded='false' aria-controls='delete_post_confirm'>Delete</button>
-            <form action='../actions/deletePost.php' method='post'>
-            <button name='delete_post' value='$post_id' type='submit' class='collapse' id='delete_post_confirm$post_id'>Are you sure to Delete?</button>
-            </form>
+            <button type='button' data-toggle='collapse' data-target='#delete_post_confirm$post_id' aria-expanded='false' aria-controls='delete_post_confirm'><i class='fas fa-trash-alt'></i></button>
+            <div class='collapse' id='delete_post_confirm$post_id'>
+                <div class='delete_button'>
+                    <p>Are you sure to delete?</p>
+                    <form action='../actions/deletePost.php' method='post'>
+                        <button name='delete_post' value='$post_id' type='submit'>Yes</button>
+                        <button type='button' data-toggle='collapse' data-target='#delete_post_confirm$post_id' aria-expanded='false' aria-controls='delete_post_confirm'>No</button>
+                    </form>
+                </div>
+            </div>
             ";
         }
     }
@@ -110,6 +118,7 @@ class Post extends Database{
             die("Error getting reply_id: ".$this->conn->error);
         }
     }
+
 
 
 
