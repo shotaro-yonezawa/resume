@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(!$_SESSION['id']){
+    header("location: index.php");
+    exit;
+}
+
 require_once "../classes/user.php";
 $user = new User;
 $account_id = $_SESSION['id'];

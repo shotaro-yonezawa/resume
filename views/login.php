@@ -44,7 +44,7 @@ $user = new User;
                                         <button type="submit" name="login">Log in</button>
                                     </form>
                                     <div class="sign_up">
-                                        <a href="../views/signup.php">Sign up</a>
+                                        <a href="../views/index.php">Sign up</a>
                                     </div>
                                 </div>
                             </div>

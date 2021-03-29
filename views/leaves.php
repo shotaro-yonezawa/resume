@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!$_SESSION['id']){
+    header("location: index.php");
+    exit;
+}
 
 require_once "../classes/post.php";
 require_once "../classes/user.php";

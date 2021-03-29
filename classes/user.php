@@ -75,26 +75,6 @@ class User extends Database{
            die("Error retrieving a user profile: " . $this->conn->error);
         }
     }
-
-    // public function seeUsername(){
-    //     if(isset($_POST["profile_btn"])){
-    //         $cnt1 = $_POST["cnt"];
-    //         if($cnt1 % 2 == 0){
-    //             $switch =+ 1;
-    //             $user_id = $_POST['profile_btn'];
-    //             $sql = "SELECT * FROM users WHERE id = $user_id";
-    //             if($result = $this->conn->query($sql)){
-    //                 $row = $result->fetch_assoc();
-    //                 $username = $row['username'];
-    //                 $user_bio = $row['bio'];
-    //                 return "<p>$username</p>
-    //                 <p>$user_bio</p>";
-    //             }
-    //         }else{
-    //             return NULL;
-    //         }
-    //     }
-    // }
     
     public function createUser($username,$password){
         $password = password_hash($password,PASSWORD_DEFAULT);
@@ -177,7 +157,7 @@ class User extends Database{
             if($this->conn->query($sql2)){
                 $sql3 = "DELETE FROM users WHERE `id` = $account_id";
                 if($this->conn->query($sql3)){
-                    header("location: ../views/login.php");
+                    header("location: ../views/index.php");
                     exit;
                 }else{
                     die("Error deleting account from users table: ".$this->conn->error);

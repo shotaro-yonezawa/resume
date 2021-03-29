@@ -1,13 +1,16 @@
 <?php
 session_start();
+if(!$_SESSION['id']){
+    header("location: index.php");
+    exit;
+}
+
 require_once "../classes/user.php";
 $user = new User;
 $user_id = $_GET['user_id'];
-// $account_id = $_SESSION['id'];
 $user_photo = $user->getUserPhoto($user_id);
 $user_profile = $user->getUserProfile();
 
-// echo $_SESSION['id'];
 ?>
 
 <!DOCTYPE html>
