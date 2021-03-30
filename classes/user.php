@@ -157,7 +157,7 @@ class User extends Database{
             if($this->conn->query($sql2)){
                 $sql3 = "DELETE FROM users WHERE `id` = $account_id";
                 if($this->conn->query($sql3)){
-                    header("location: ../views/index.php");
+                    header("location: index.php");
                     exit;
                 }else{
                     die("Error deleting account from users table: ".$this->conn->error);

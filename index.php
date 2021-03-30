@@ -1,5 +1,5 @@
 <?php
-require_once "../classes/user.php";
+require_once "classes/user.php";
 
 $user = new User;
 ?>
@@ -13,7 +13,7 @@ $user = new User;
     <meta name="Description" content="Enter your description here"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="../views/assets/css/index.css">
+    <link rel="stylesheet" href="views/assets/css/index.css">
     <title>Sign up</title>
 </head>
 <body>
@@ -45,7 +45,7 @@ $user = new User;
                                     <button type="submit" name="signup">Sign up</button>
                                 </form>  
                                 <div class="log_in">
-                                    <a href="../views/login.php">Log in</a>
+                                    <a href="views/login.php">Log in</a>
                                 </div>
                             </div>
                         </div>

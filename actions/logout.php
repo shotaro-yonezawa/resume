@@ -7,5 +7,5 @@ session_unset();
 // $_SESSION['id'];
 session_destroy();
 
-header("location: ../views/login.php"); //go to index.php / Login
+header("location: login.php"); //go to index.php / Login
 exit;
