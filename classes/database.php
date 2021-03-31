@@ -4,8 +4,14 @@ class Database {
     private $server_name = "localhost";
     private $username = "root";
     private $password = "root"; 
-    //for MAMP user, "root"
     private $db_name = "bleaf";
+
+    // --------------- Local ---------------
+    // private $username = "root";
+    // private $password = "root"; 
+    //$password for MAMP user = "root"
+    // private $db_name = "bleaf";
+    // -------------------------------------
     protected $conn;
 
     public function __construct(){
