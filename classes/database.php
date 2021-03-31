@@ -3,7 +3,8 @@
 class Database {
     private $server_name = "localhost";
     private $username = "root";
-    private $password = "root"; //for MAMP user, "root"
+    private $password = "root"; 
+    //for MAMP user, "root"
     private $db_name = "bleaf";
     protected $conn;
 
