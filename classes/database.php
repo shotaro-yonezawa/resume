@@ -5,8 +5,9 @@ class Database {
     private $username = "bc7f2983a1e429";
     private $password = "084bfab7"; 
     private $db_name = "heroku_9a2ca3cb78f84b6";
-
+    
     // --------------- Local ---------------
+    // private $server_name = "localhost";
     // private $username = "root";
     // private $password = "root"; 
     //$password for MAMP user = "root"
