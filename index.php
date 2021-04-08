@@ -33,9 +33,9 @@ $user = new User;
                             </div>
                             <div class="col-8">
                                 <form action="" method="post">
-                                    <label for="username">username</label>
+                                    <label for="username">username (character limit: 3-15)</label>
                                     <input type="text" name="username" id="username" maxlength="15" minlength="3" required autofocus>
-                                    <label for="password">password</label>
+                                    <label for="password">password (character limit: 6-255)</label>
                                     <input type="password" name="password" id="password" maxlength="255" minlength="6" required>
                                     <label for="confirm_password">confirm password</label>
                                     <input type="password" name="confirm_password" id="confirm_password" maxlength="255" minlength="6" required>
