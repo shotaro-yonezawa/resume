@@ -109,40 +109,42 @@ $session_user_profile = $user->getOneUserProfile($session_id);
                 </div>
             </div>
             <div class="col-12 col-lg-4">
-                <div class="post_leaf">
-                    <form action="../actions/addPost.php" method="post">
-                        <textarea name="content" maxlength="200" placeholder="Write your new leaf here" required></textarea>
-                        <div class="row">
-                            <button class="col-12 col-lg-3 ml-auto" type="submit" name="btn_add_post">Add <i class="fab fa-envira"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="profileCard">
-                    <div class="row">
-                        <div class="col-4">
-                            <?=
-                                "<img src='../img/"."$user_photo'"."  alt='Profile Photo' class='card-top-img'>"
-                            ?>
-                        </div>
-                        <div class="col-8">
-                            <div class="textContents">
-                                <div class="sessionUsername">
-                                    <p><?= $session_user_profile['username'] ?></p>
-                                </div>
-                                <div class="bio">
-                                    <p><?= $session_user_profile['bio'] ?></p>
-                                </div>
+                <div class="responsibleArea">
+                    <div class="post_leaf">
+                        <form action="../actions/addPost.php" method="post">
+                            <textarea name="content" maxlength="200" placeholder="Write your new leaf here" required></textarea>
+                            <div class="row">
+                                <button class="col-12 col-lg-3 ml-auto" type="submit" name="btn_add_post">Add <i class="fab fa-envira"></i></button>
                             </div>
-                            <div class="editProfile">
-                                <?= $user->editUserButton($session_id) ?>
+                        </form>
+                    </div>
+                    <div class="profileCard">
+                        <div class="row">
+                            <div class="col-1 col-lg-4">
+                                <?=
+                                    "<img src='../img/"."$user_photo'"."  alt='Profile Photo' class='card-top-img'>"
+                                ?>
+                            </div>
+                            <div class="col-11 col-lg-8">
+                                <div class="textContents">
+                                    <div class="sessionUsername">
+                                        <p><?= $session_user_profile['username'] ?></p>
+                                    </div>
+                                    <div class="bio">
+                                        <p><?= $session_user_profile['bio'] ?></p>
+                                    </div>
+                                </div>
+                                <div class="editProfile">
+                                    <?= $user->editUserButton($session_id) ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="link">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 ml-auto">
-                            <a href="../actions/logout.php">Log out</a>
+                    <div class="link">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 ml-auto">
+                                <a href="../actions/logout.php">Log out</a>
+                            </div>
                         </div>
                     </div>
                 </div>
