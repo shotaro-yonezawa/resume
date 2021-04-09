@@ -5,29 +5,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: 'Black Ops One', cursive; */
     text-decoration: none;
-    /* color: #ffffff; */
     font-family: 'Work Sans', sans-serif;
     color: #e7dfd5;
-
 }
 
 body{
     background-image: url(../img/leaves2.jpg);
-    /* background-repeat: no-repeat; */
     background-size: cover;
     height: 100%;
     background-attachment: fixed;
-    /* background-color:white; */
+    padding-bottom:20px;
 }
 a{
     color: #74a1ca;
 }
 
 h1{
-    padding-top: 140px;
-    margin-bottom:30px;
+    padding-top: 5%;
+    margin-bottom:3%;
     text-align: center;
     font-size: 80px;
     font-family: 'Original Surfer', cursive;
@@ -38,11 +34,8 @@ h1 > span{
 }
 
 .card{
-    /* margin-top:30%; */
     background-color: rgba(33, 47, 84, 0.7);
     border: 1px solid #e7dfd5;
-    /* background-image: url(../img/leaf_background.jpg);
-    background-size: cover; */
 }
 .card-body > p{
     font-size: 40px;
@@ -72,7 +65,6 @@ form button{
 form button:hover{
     background-color: #e7dfd5;
     color:rgba(33, 47, 84, 1);
-    /* color: #74a1ca; */
 }
 .errorMessage p{
     color:yellow;

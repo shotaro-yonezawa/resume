@@ -19,20 +19,14 @@ $user = new User;
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-2">
-
-            </div>
-            <div class="col-8">
+            <div class="col-12 col-lg-8 mx-auto">
                 <div class="contents">
                     <h1><span>B</span>LEAF</h1>
                     <div class="card">
                         <div class="card-body">
                             <p>Log in</p>
                             <div class="row">
-                                <div class="col-2">
-                                    
-                                </div>
-                                <div class="col-8">
+                                <div class="col-12 col-lg-8 mx-auto">
                                     <form action="" method="post">
                                         <label for="username">username</label>
                                         <input type="text" name="username" id="username" maxlength="15" minlength="3" required autofocus>

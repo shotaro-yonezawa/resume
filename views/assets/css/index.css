@@ -15,8 +15,8 @@ a{
 }
 
 h1{
-    padding-top: 140px;
-    margin-bottom:30px;
+    padding-top: 5%;
+    margin-bottom:3%;
     text-align: center;
     font-size: 80px;
     font-family: 'Original Surfer', cursive;
@@ -31,6 +31,7 @@ body{
     background-size: cover;
     height: 100%;
     background-attachment: fixed;
+    padding-bottom:20px;
 }
 
 .card{

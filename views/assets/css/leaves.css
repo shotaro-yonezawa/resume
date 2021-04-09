@@ -14,6 +14,9 @@ textarea:focus{
     background: none;
 }
 
+main{
+    padding-bottom:20px;
+}
 body{
     background-image: url(../img/paw.jpg);
     /* background-repeat: no-repeat; */
@@ -198,13 +201,13 @@ body{
 }
 
 .post_leaf{
-    margin-top:50px;
     padding:30px;
+    margin-top:8%;
+    margin-bottom:4%;
     /* font-family: 'Original Surfer', cursive; */
     background-image: url(../img/leaf_background.jpg);
     background-size: cover;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
-
 }
 .post_leaf button{
     color: rgba(255,255,255,0.8);
@@ -241,7 +244,7 @@ body{
 /* -------- Session User Profile -------- */
 .profileCard{
     padding:20px 20px;
-    margin-top:50px;
+    /* margin-top:50px; */
     position: relative;
     background-image: url(../img/pexels-la-miko-3616764.jpg);
     background-size: cover;
