@@ -69,8 +69,6 @@ body{
 .leaf_contents{
     padding-left:80px;
     padding-right:30px;
-    
-    /* background-color: green; */
 }
 .post{
     font-family: 'Cairo', sans-serif;
@@ -85,9 +83,15 @@ body{
 .username{
     font-size: 25px;
     padding-top:5px;
-    /* padding-bottom:17px; */
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
+}
+.username span{
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    margin-left:10px;
+    color: rgba(231, 223, 213, 0.6);
 }
 .delete_leaf{
     position:absolute;

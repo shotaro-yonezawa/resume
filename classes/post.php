@@ -119,6 +119,41 @@ class Post extends Database{
         }
     }
 
+    public function replyName($post_id){
+        $sql1 = "SELECT reply_id FROM posts WHERE post_id = $post_id";
+        if($result = $this->conn->query($sql1)){
+            $row = $result->fetch_assoc();
+            $reply_id = $row['reply_id'];
+            if($reply_id != NULL){
+                $sql2 = "SELECT reply_address_id FROM replies WHERE reply_id = $reply_id";
+                if($result = $this->conn->query($sql2)){
+                    $row = $result->fetch_assoc();
+                    $reply_address_id = $row['reply_address_id'];
+                    $sql3 = "SELECT `user_id` FROM posts WHERE post_id = $reply_address_id";
+                    if($result = $this->conn->query($sql3)){
+                        $row = $result->fetch_assoc();
+                        $reply_address_user_id = $row['user_id'];
+                        $sql4 = "SELECT username FROM users WHERE id = $reply_address_user_id";
+                        if($result = $this->conn->query($sql4)){
+                            $row = $result->fetch_assoc();
+                            $reply_address_user_name = $row['username'];
+                            echo " <i class='fas fa-angle-right'></i> <a href='profile.php?user_id=$reply_address_user_id'>$reply_address_user_name</a>";
+                        }
+                        else{
+                            die("Error getting username: ".$this->conn->error);
+                        }
+                    }else{
+                        die("Error getting user id: ".$this->conn->error);
+                    }    
+                }else{
+                    die("Error getting reply address id: ".$this->conn->error);
+                }
+            }
+        }else{
+            die("Error getting reply_id: ".$this->conn->error);
+        }
+    }
+
 
 
 

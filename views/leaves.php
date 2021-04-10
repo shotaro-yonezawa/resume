@@ -52,6 +52,7 @@ $session_user_profile = $user->getOneUserProfile($session_id);
                                 <div class="leaf_contents">
                                     <div class="username">
                                         <a href="profile.php?user_id=<?= $user_id ?>"><?= $post['username'] ?></a>
+                                        <span><?= $post_obj->replyName($post_id) ?></span>
                                     </div>
                                     <div class="post">
                                         <p><?= $post['content'] ?></p>
