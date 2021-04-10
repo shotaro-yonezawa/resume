@@ -115,7 +115,8 @@ $session_user_profile = $user->getOneUserProfile($session_id);
                         <form action="../actions/addPost.php" method="post">
                             <textarea name="content" maxlength="200" placeholder="Write your new leaf here" required></textarea>
                             <div class="row">
-                                <button class="col-12 col-lg-3 ml-auto" type="submit" name="btn_add_post">Add <i class="fab fa-envira"></i></button>
+                                <div class="col-1 col-lg-8"></div>
+                                <button class="col-10 col-lg-4" type="submit" name="btn_add_post">Add <i class="fab fa-envira"></i></button>
                             </div>
                         </form>
                     </div>
@@ -143,7 +144,7 @@ $session_user_profile = $user->getOneUserProfile($session_id);
                     </div>
                     <div class="link">
                         <div class="row">
-                            <div class="col-12 col-lg-4 ml-auto">
+                            <div class="col-12 col-lg-5 ml-auto">
                                 <a href="../actions/logout.php">Log out</a>
                             </div>
                         </div>

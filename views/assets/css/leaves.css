@@ -205,6 +205,11 @@ body{
     margin:0;
 }
 
+.responsibleArea{
+    position: fixed;
+    padding-right:8%;
+}
+
 .post_leaf{
     padding:30px;
     margin-top:8%;
@@ -242,7 +247,6 @@ body{
     border: 1px solid rgba(255,255,255,0.7);
     border-radius: 5px;
     background-color: rgba(0,0,0,0.2);
-    
 }
 
 
@@ -314,10 +318,15 @@ body{
     .leaves{
         padding-bottom:200px;
     }
+    .post_leaf{
+        padding:10px;
+        background-image: url(../img/leaf_background.jpg);
+        background-size: cover;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+    }
     .responsibleArea{
         width: 100%;
-        /* padding:0; */
-        /* position: absolute; */
+        padding-right:0;
         position: fixed;
         left:0px;
         bottom:0px;
