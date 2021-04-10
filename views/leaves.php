@@ -51,7 +51,7 @@ $session_user_profile = $user->getOneUserProfile($session_id);
                                 <img src="../img/<?= $user_obj->getUserPhoto($user_id) ?>" alt="Profile Picture">
                                 <div class="leaf_contents">
                                     <div class="username">
-                                        <a href="userprofile.php?user_id=<?= $user_id ?>"><?= $post['username'] ?></a>
+                                        <a href="profile.php?user_id=<?= $user_id ?>"><?= $post['username'] ?></a>
                                     </div>
                                     <div class="post">
                                         <p><?= $post['content'] ?></p>
