@@ -73,3 +73,12 @@ form button:hover{
 .sign_up{
     text-align: end;
 }
+
+@media(max-width:576px){
+    h1{
+        font-size: 50px;
+    }
+    .card-body > p{
+        font-size: 30px;
+    }
+}

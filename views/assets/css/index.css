@@ -77,7 +77,15 @@ form button:hover{
     color:yellow;
     font-size: 18px;
 }
-
 .log_in{
     text-align: end;
+}
+
+@media(max-width:576px){
+    h1{
+        font-size: 50px;
+    }
+    .card-body > p{
+        font-size: 30px;
+    }
 }
