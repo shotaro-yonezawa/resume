@@ -7,7 +7,7 @@ if(!$_SESSION['id']){
 
 require_once "../classes/user.php";
 $user = new User;
-// $user_id = $_GET['user_id'];
+$user_id = $_GET['user_id'];
 $user_photo = $user->getUserPhoto($user_id);
 $user_profile = $user->getUserProfile();
 
@@ -27,8 +27,52 @@ $user_profile = $user->getUserProfile();
 </head>
 <body>
     <main>
-        <p>success</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-1 col-lg-2">
+
+                </div>
+                <div class="col-8">
+                    <div class="profileCard">
+                        <div class="row">
+                            <div class="col-8 col-lg-4">
+                                <?=
+                                    "<img src='../img/"."$user_photo'"."  alt='Profile Photo' class='card-top-img'>"
+                                ?>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="textContents">
+                                    <div class="username">
+                                        <p><?= $user_profile['username'] ?></p>
+                                    </div>
+                                    <div class="bio">
+                                        <p><?= $user_profile['bio'] ?></p>
+                                    </div>
+                                </div>
+                                <div class="editProfile">
+                                    <?= $user->editUserButton($user_id) ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <div class="row">
+                            <div class="col-12 col-lg-5">
+                                <a href="leaves.php"><i class="fas fa-arrow-left"></i> Back to Leaves</a>
+                            </div>
+                            <div class="col-3">
+
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <a href="../actions/logout.php">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
