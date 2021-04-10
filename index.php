@@ -18,6 +18,7 @@ $user = new User;
 </head>
 <body>
     <h1><span>B</span>LEAF</h1>
+    <p>※右下 Log in ボタンから username: testuser, password: testuser でログインも可能です</p>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8 mx-auto">

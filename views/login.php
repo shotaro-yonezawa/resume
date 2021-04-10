@@ -22,6 +22,7 @@ $user = new User;
             <div class="col-12 col-lg-8 mx-auto">
                 <div class="contents">
                     <h1><span>B</span>LEAF</h1>
+                    <p>※ username: testuser, password: testuser でログインも可能です</p>
                     <div class="card">
                         <div class="card-body">
                             <p>Log in</p>

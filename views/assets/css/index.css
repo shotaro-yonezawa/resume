@@ -16,7 +16,6 @@ a{
 
 h1{
     padding-top: 5%;
-    margin-bottom:3%;
     text-align: center;
     font-size: 80px;
     font-family: 'Original Surfer', cursive;
@@ -33,7 +32,13 @@ body{
     background-attachment: fixed;
     padding-bottom:20px;
 }
-
+body > p{
+    color:yellow;
+    text-align: center;
+    padding-left:15px;
+    padding-right:15px;
+    /* margin-bottom:3%; */
+}
 .card{
     background-color: rgba(33, 47, 84, 0.7);
     border: 1px solid #e7dfd5;

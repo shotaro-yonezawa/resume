@@ -17,6 +17,14 @@ body{
     background-attachment: fixed;
     padding-bottom:20px;
 }
+.contents > p{
+    color:yellow;
+    text-align: center;
+    /* padding-left:15px;
+    padding-right:15px; */
+    /* margin-bottom:3%; */
+}
+
 a{
     color: #74a1ca;
 }
