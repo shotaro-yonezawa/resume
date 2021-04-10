@@ -64,9 +64,5 @@
   - Bootstrap
 
 
-<!-- - ### [リポジトリ](https://github.com/shotaro-yonezawa/resume) -->
-
-<!-- - ### [Heroku](https://bleaf.herokuapp.com/) -->
-
 
 
